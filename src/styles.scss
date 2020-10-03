@@ -1,1 +1,94 @@
 /* You can add global styles to this file, and also import other style files */
+body,span,h1,h2,h3,h5,h6,a,p
+{
+margin: 0;
+padding: 0;
+font-size: 16px;
+}h3{
+margin-bottom: 3px;
+}
+//use when div not taking its hieght
+.group:after {
+    visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+  }
+  //rest default css for pagination
+  pagination-controls .ngx-pagination li.current {
+
+    background-color: yellow !important;
+      border-radius: 8px!important;
+      margin-right: 5px!important;
+      font-weight: 600;
+      padding: 9px 11px;
+  }
+  pagination-controls .ngx-pagination a{
+    box-shadow: 2px 3px 6px 0 rgba(0,0,0,.08);
+    background-color: #fff;
+    color:yellow !important;
+      border-radius: 8px!important;
+      margin-right: 5px!important;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 9px 11px;
+  }
+  pagination-controls .ngx-pagination .disabled
+  {
+    background-color: rgba(0,0,0,.08);
+      margin-right: 5px!important;
+      border-radius: 8px!important;
+      color: rgba(0,0,0,.38);
+      font-weight: 600;
+      padding: 9px 11px;
+  
+  }
+  pagination-controls .ngx-pagination .pagination-previous.disabled::before 
+      
+  {
+    content:none;
+  }
+  
+  pagination-controls .ngx-pagination .pagination-previous.disabled::after
+      
+  {
+    content:none;
+  }
+  pagination-controls .ngx-pagination .pagination-next.disabled::after
+      
+  {
+    content:none;
+  
+  }
+  
+  pagination-controls .ngx-pagination .pagination-next.disabled::before
+      
+  {
+    content:none;
+  }
+  
+  pagination-controls .ngx-pagination .pagination-next a::after
+      
+  {
+    content:none;
+  }
+  
+  pagination-controls .ngx-pagination .pagination-previous a::before
+      
+  {
+    content:none;
+  }
+  
+  pagination-controls .ngx-pagination a:hover{
+    text-decoration: none;
+    color: yellow !important;
+  }
+  
+  .ngx-pagination .current {
+    padding: 0.1875rem 0.625rem;
+    background: yellow !important;
+    color: #fefefe;
+    cursor: default;
+}

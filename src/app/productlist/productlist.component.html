@@ -1,0 +1,38 @@
+<div class="productContainer group">
+    <!-- <ng-template #customLoadingTemplate> -->
+        <div class="navBar group">
+          <div class="marginLR group">   
+                <div class="filter">
+                  <select [(ngModel)]="selectedValue" class="sortBy"  (ngModelChange)="sortBy($event)">
+                      <option *ngFor="let value of sortType" [value]="value">{{value}}</option>
+                    </select>
+                </div>
+          </div>
+        </div>
+         
+           <div class="contentBar group"> 
+              <div class="contentCard group">
+                  <div *ngFor="let product of productDetails | paginate: {  totalItems: total , itemsPerPage:15, currentPage: p} let i=index">  
+                        <div class="card">
+                          <!-- <h1 class="proDetailsStyle haeding">{{i}}</h1> -->
+                              <h3 class="haeding">Id:<span class="proDetailsStyle">{{product?.id}}</span></h3>
+                             <div style="margin-left: 145px;" class="faceStyle proDetailsStyle" [ngStyle]="{'font-size': product.size + 'px'}">{{product.face}}</div>
+                              <h3 class="haeding">Price:<span class="proDetailsStyle">{{product?.price|currency}}</span></h3>
+                              <h3 class="haeding">Product Size:<span class="proDetailsStyle">{{product?.size}}</span></h3>
+                              <h3 class="haeding">Date:<span class="proDetailsStyle">{{product.date}}</span></h3>        
+                         </div>
+                   </div>
+                </div>
+             </div>
+            <div class="navBar">
+                <div class="pagination group">
+                      <pagination-controls (pageChange)="  getProductsOnLoadAndOnPageChange($event)" [ngClass]="{'paginationShow': statusText === true, 'paginationHide': statusText === false }"></pagination-controls>
+                </div>
+              </div>
+         
+      <!-- </ng-template> -->
+   
+    <div><ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading></div>
+</div>
+ 
+  
